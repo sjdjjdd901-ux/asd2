@@ -3,433 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>PVS Streetwear</title>
+<title>PVS Markets</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-    background:#111;
+    background:#0d1117;
     color:white;
 }
 
-/* NAVBAR */
-
-nav{
-    width:100%;
-    height:80px;
-    background:#000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 60px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #222;
-}
-
-.logo{
-    font-size:36px;
-    font-weight:900;
-    letter-spacing:3px;
-    color:#2b6fff;
-}
-
-.menu{
-    display:flex;
-    gap:35px;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    font-size:15px;
-}
-
-.menu a:hover{
-    color:#2b6fff;
-}
-
-/* HERO */
-
-.hero{
-    height:90vh;
-    background:
-    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:90px;
-    font-weight:900;
-    letter-spacing:8px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    max-width:700px;
-    font-size:22px;
-    color:#dcdcdc;
-    margin-bottom:35px;
-}
-
-.hero button{
-    width:220px;
-    height:60px;
-    border:none;
-    border-radius:12px;
-    background:#2b6fff;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.hero button:hover{
-    transform:scale(1.05);
-    background:#4d84ff;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
-    padding:80px 60px;
-}
-
-.feature-card{
-    background:#181818;
-    border:1px solid #252525;
-    border-radius:18px;
-    padding:35px;
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-8px);
-    border-color:#2b6fff;
-}
-
-.feature-card h2{
-    color:#2b6fff;
-    margin-bottom:15px;
-    font-size:28px;
-}
-
-.feature-card p{
-    color:#cfcfcf;
-    line-height:1.6;
-}
-
-/* PRODUCTS */
-
-.products{
-    padding:40px 60px 100px;
-}
-
-.section-title{
-    font-size:48px;
-    font-weight:900;
-    margin-bottom:45px;
+header{
+    background:linear-gradient(135deg,#00c853,#0091ea);
+    padding:30px;
     text-align:center;
 }
 
-.product-grid{
+header h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+header p{
+    margin-top:10px;
+    opacity:.9;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.product{
-    background:#181818;
-    border-radius:18px;
-    overflow:hidden;
-    transition:.3s;
-    border:1px solid #242424;
-}
-
-.product:hover{
-    transform:scale(1.03);
-}
-
-.product img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-}
-
-.product-info{
+.card{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:16px;
     padding:25px;
+    transition:.3s;
 }
 
-.product-info h3{
-    font-size:28px;
-    margin-bottom:10px;
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00c853;
 }
 
-.product-info p{
-    color:#cfcfcf;
-    margin-bottom:18px;
+.symbol{
+    font-size:1.2rem;
+    color:#58a6ff;
 }
 
 .price{
-    color:#2b6fff;
-    font-size:26px;
+    font-size:2rem;
+    margin:10px 0;
+}
+
+.up{
+    color:#00e676;
     font-weight:bold;
 }
 
-/* CTA */
-
-.cta{
-    padding:100px 20px;
-    text-align:center;
-    background:#0c0c0c;
-}
-
-.cta h2{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.cta p{
-    color:#cfcfcf;
-    font-size:20px;
-    margin-bottom:30px;
-}
-
-.cta button{
-    width:240px;
-    height:60px;
-    border:none;
-    border-radius:12px;
-    background:#2b6fff;
-    color:white;
-    font-size:18px;
+.down{
+    color:#ff5252;
     font-weight:bold;
-    cursor:pointer;
 }
 
-/* FOOTER */
+.section-title{
+    margin:40px 0 20px;
+    font-size:2rem;
+    color:#00c853;
+}
+
+.about{
+    background:#161b22;
+    border-radius:16px;
+    padding:30px;
+    line-height:1.8;
+}
 
 footer{
-    padding:40px;
+    margin-top:50px;
     text-align:center;
-    background:black;
-    color:#777;
-    border-top:1px solid #222;
+    padding:25px;
+    background:#161b22;
+    color:#8b949e;
 }
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    nav{
-        padding:0 20px;
-    }
-
-    .menu{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:55px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .section-title{
-        font-size:38px;
-    }
-
-    .cta h2{
-        font-size:42px;
-    }
-
-}
-
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+<header>
+    <h1>PVS Markets</h1>
+    <p>Seguimiento profesional de la bolsa de valores con tecnología PVS</p>
+</header>
 
-<nav>
+<div class="container">
 
-    <div class="logo">PVS</div>
+    <h2 class="section-title">Índices Principales</h2>
 
-    <div class="menu">
-        <a href="#">Inicio</a>
-        <a href="#">PVS Drops</a>
-        <a href="#">Streetwear</a>
-        <a href="#">Colección</a>
-        <a href="#">Contacto</a>
+    <div class="cards">
+        <div class="card">
+            <div class="symbol">S&P 500</div>
+            <div class="price">5.842,15</div>
+            <div class="up">▲ +1,28%</div>
+        </div>
+
+        <div class="card">
+            <div class="symbol">NASDAQ</div>
+            <div class="price">18.965,32</div>
+            <div class="up">▲ +1,84%</div>
+        </div>
+
+        <div class="card">
+            <div class="symbol">Dow Jones</div>
+            <div class="price">42.183,67</div>
+            <div class="down">▼ -0,42%</div>
+        </div>
+
+        <div class="card">
+            <div class="symbol">Merval</div>
+            <div class="price">2.354.890</div>
+            <div class="up">▲ +2,13%</div>
+        </div>
     </div>
 
-</nav>
+    <h2 class="section-title">PVS Market Analytics</h2>
 
-<!-- HERO -->
-
-<section class="hero">
-
-    <h1>PVS STREETWEAR</h1>
-
-    <p>
-        La nueva generación de ropa urbana.
-        Diseños exclusivos PVS inspirados en el streetwear moderno.
-    </p>
-
-    <button onclick="alert('Bienvenido a PVS 🔥')">
-        Comprar ahora
-    </button>
-
-</section>
-
-<!-- FEATURES -->
-
-<section class="features">
-
-    <div class="feature-card">
-        <h2>PVS Quality</h2>
+    <div class="about">
         <p>
-            Prendas premium con materiales de alta calidad y estilo urbano moderno.
+            Bienvenido a <strong>PVS</strong>, una plataforma diseñada para visualizar
+            información financiera de manera clara y moderna.
+        </p>
+
+        <p>
+            Los datos mostrados en <strong>PVS Markets</strong> permiten seguir la evolución
+            de los principales índices bursátiles internacionales y regionales.
+        </p>
+
+        <p>
+            Gracias a las herramientas de <strong>PVS</strong>, los inversores pueden
+            analizar tendencias, movimientos diarios y rendimiento histórico del mercado.
+        </p>
+
+        <p>
+            <strong>PVS</strong> combina diseño, velocidad y simplicidad para ofrecer
+            una experiencia visual agradable y profesional.
         </p>
     </div>
 
-    <div class="feature-card">
-        <h2>PVS Limited</h2>
-        <p>
-            Drops exclusivos PVS disponibles por tiempo limitado.
-        </p>
-    </div>
-
-    <div class="feature-card">
-        <h2>PVS Style</h2>
-        <p>
-            Inspirado en la cultura streetwear, oversized y fashion internacional.
-        </p>
-    </div>
-
-</section>
-
-<!-- PRODUCTOS -->
-
-<section class="products">
-
-    <h2 class="section-title">
-        Colección PVS
-    </h2>
-
-    <div class="product-grid">
-
-        <div class="product">
-
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
-
-            <div class="product-info">
-
-                <h3>PVS Hoodie</h3>
-
-                <p>
-                    Buzo oversized premium edición limitada.
-                </p>
-
-                <div class="price">
-                    $59.999
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="product">
-
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
-
-            <div class="product-info">
-
-                <h3>PVS Cargo</h3>
-
-                <p>
-                    Pantalón cargo streetwear unisex.
-                </p>
-
-                <div class="price">
-                    $74.999
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="product">
-
-            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
-
-            <div class="product-info">
-
-                <h3>PVS Tee</h3>
-
-                <p>
-                    Remera minimalista PVS collection.
-                </p>
-
-                <div class="price">
-                    $29.999
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>JOIN THE PVS MOVEMENT</h2>
-
-    <p>
-        Streetwear exclusivo. Diseño moderno. Estilo auténtico.
-    </p>
-
-    <button onclick="alert('PVS 🚀')">
-        Explorar PVS
-    </button>
-
-</section>
-
-<!-- FOOTER -->
+</div>
 
 <footer>
-
-    © 2026 PVS Streetwear — Todos los derechos reservados.
-
+    © 2026 PVS Markets | Información financiera y análisis bursátil PVS
 </footer>
 
 </body>
